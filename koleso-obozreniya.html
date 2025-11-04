@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Колесо обозрения - Новогодняя Казань</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1a237e, #283593, #3949ab);
+            color: white;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .story {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .audio-player {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .comparison-table th,
+        .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .comparison-table th {
+            background: rgba(255, 215, 0, 0.3);
+            color: #ffd700;
+        }
+
+        .food-image {
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Назад к достопримечательностям</a>
+
+        <div class="content-grid">
+            <!-- Блок 1: Достопримечательность -->
+            <div class="section">
+                <h1>🎡 Колесо обозрения "Вокруг света"</h1>
+                <div class="story">
+                    <p>В канун Нового года колесо обозрения превращается в волшебный портал. Говорят, что если прокатиться на нем в полночь 31 декабря, можно увидеть не только всю Казань в новогодних огнях, но и свое будущее.</p>
+                    <p>Каждая кабинка украшена зимними узорами, а когда ты поднимаешься на самую высокую точку - 65 метров - город кажется сказочным королевством, усыпанным бриллиантами огней.</p>
+                    <p><strong>Новогодняя легенда:</strong> Тот, кто загадает желание на самой высокой точке колеса, обязательно получит помощь от самого Кыш Бабая - татарского Деда Мороза.</p>
+                </div>
+            </div>
+
+            <!-- Блок 2: Аудио-плейлист -->
+            <div class="section">
+                <h2>🎵 Новогодний плейлист "Высота мечты"</h2>
+                <div class="audio-player">
+                    <h3>❄️ Зимние мелодии для полета над городом:</h3>
+                    <ul style="list-style: none; padding: 20px 0;">
+                        <li style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">🎶 "Winter Wonderland" - традиционная новогодняя</li>
+                        <li style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">🎶 "Jingle Bells" в оркестровом исполнении</li>
+                        <li style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">🎶 Татарская народная "Кышкы жыр" (Зимняя песня)</li>
+                        <li style="padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">🎶 "Снежинка" - современная зимняя композиция</li>
+                        <li style="padding: 10px;">🎶 "Кар кабыза" (Снег кружится) - народная мелодия</li>
+                    </ul>
+                    <div style="margin-top: 20px; padding: 15px; background: rgba(255,215,0,0.2); border-radius: 10px;">
+                        <strong>Совет:</strong> Слушайте этот плейлист во время катания на колесе для полного погружения в новогоднюю атмосферу!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Блок 3: Сравнительная таблица блюд -->
+            <div class="section">
+                <h2>🍽️ Новогодние угощения: Татарская vs Русская кухня</h2>
+                <table class="comparison-table">
+                    <tr>
+                        <th>Блюдо</th>
+                        <th>Татарская кухня</th>
+                        <th>Русская кухня</th>
+                    </tr>
+                    <tr>
+                        <td><div class="food-image">🥟</div>Основное блюдо</td>
+                        <td><strong>Эчпочмак</strong> - треугольный пирог с мясом и картофелем</td>
+                        <td><strong>Пельмени</strong> - с мясной начинкой, подаются со сметаной</td>
+                    </tr>
+                    <tr>
+                        <td><div class="food-image">🍰</div>Сладкое</td>
+                        <td><strong>Чак-чак</strong> - медовые шарики из теста</td>
+                        <td><strong>Пряники</strong> - медовые с глазурью</td>
+                    </tr>
+                    <tr>
+                        <td><div class="food-image">🍵</div>Напиток</td>
+                        <td><strong>Татарский чай</strong> - с травами и медом</td>
+                        <td><strong>Сбитень</strong> - горячий медовый напиток</td>
+                    </tr>
+                    <tr>
+                        <td><div class="food-image">🍲</div>Суп</td>
+                        <td><strong>Токмач</strong> - лапша с курицей</td>
+                        <td><strong>Щи</strong> - капустный суп</td>
+                    </tr>
+                    <tr>
+                        <td><div class="food-image">🎂</div>Десерт</td>
+                        <td><strong>Губадия</strong> - многослойный пирог</td>
+                        <td><strong>Оливье</strong> - салат (традиционно считается десертом)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новогодняя Казань - Волшебные достопримечательности</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #0c2461, #1e3799, #4a69bd);
+            color: white;
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .snow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        .snowflake {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            margin-bottom: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #ffd700, #ff9ff3, #74b9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .attractions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .attraction-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .attraction-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .attraction-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: #ffd700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .attraction-card p {
+            font-size: 1.1em;
+            line-height: 1.5;
+            opacity: 0.9;
+        }
+
+        .decoration {
+            position: absolute;
+            font-size: 2em;
+            z-index: 1;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body>
+    <div class="snow" id="snow"></div>
+    
+    <div class="decoration">🎄</div>
+    <div class="decoration">❄️</div>
+    <div class="decoration">⭐</div>
+    <div class="decoration">🎁</div>
+
+    <div class="container">
+        <header class="header">
+            <h1>🎄 Новогодняя Казань</h1>
+            <p>Волшебные достопримечательности, сказки и новогодние традиции</p>
+            <div style="font-size: 2em; margin-top: 20px;">✨ 🎅 🎄 🎁 ✨</div>
+        </header>
+
+        <div class="attractions-grid">
+            <a href="koleso.html" class="attraction-card">
+                <h3>🎡 Колесо обозрения</h3>
+                <p>Новогодняя панорама города с высоты и зимние мелодии</p>
+            </a>
+
+            <a href="mechet.html" class="attraction-card">
+                <h3>🕌 Мечеть Кул-Шариф</h3>
+                <p>Легенда о белом драконе и новогодние молитвы</p>
+            </a>
+
+            <a href="bashnya.html" class="attraction-card">
+                <h3>🏰 Башня Сююмбике</h3>
+                <p>Сказка о храброй царице и волшебстве новогодней ночи</p>
+            </a>
+
+            <a href="dvorets.html" class="attraction-card">
+                <h3>💒 Дворец бракосочетания</h3>
+                <p>Новогодние свадебные традиции татарского народа</p>
+            </a>
+
+            <a href="palace.html" class="attraction-card">
+                <h3>🏛️ Дворец земледельцев</h3>
+                <p>Истории о богатстве земли и новогодний урожай</p>
+            </a>
+
+            <a href="teatr.html" class="attraction-card">
+                <h3>🎭 Театр кукол "Экият"</h3>
+                <p>Новогодние спектакли и сказочные представления</p>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        function createSnow() {
+            const snowContainer = document.getElementById('snow');
+            const snowflakesCount = 100;
+            
+            for (let i = 0; i < snowflakesCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.className = 'snowflake';
+                
+                const size = Math.random() * 5 + 2;
+                const startPosition = Math.random() * 100;
+                const animationDuration = Math.random() * 5 + 5;
+                const animationDelay = Math.random() * 5;
+                
+                snowflake.style.width = `${size}px`;
+                snowflake.style.height = `${size}px`;
+                snowflake.style.left = `${startPosition}vw`;
+                snowflake.style.animationDuration = `${animationDuration}s`;
+                snowflake.style.animationDelay = `${animationDelay}s`;
+                snowflake.style.opacity = Math.random() * 0.6 + 0.3;
+                
+                snowContainer.appendChild(snowflake);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', createSnow);
+    </script>
+</body>
+</html>
