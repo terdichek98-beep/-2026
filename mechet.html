@@ -10,7 +10,36 @@
             padding: 0;
             box-sizing: border-box;
         }
+<!-- Снежинки -->
+<div class="snow" id="snow"></div>
 
+<script>
+    function createSnow() {
+        const snowContainer = document.getElementById('snow');
+        const snowflakesCount = 120;
+        
+        for (let i = 0; i < snowflakesCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            
+            const size = Math.random() * 6 + 2;
+            const startPosition = Math.random() * 100;
+            const animationDuration = Math.random() * 8 + 4;
+            const animationDelay = Math.random() * 5;
+            
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
+            snowflake.style.left = `${startPosition}vw`;
+            snowflake.style.animationDuration = `${animationDuration}s`;
+            snowflake.style.animationDelay = `${animationDelay}s`;
+            snowflake.style.opacity = Math.random() * 0.7 + 0.3;
+            
+            snowContainer.appendChild(snowflake);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', createSnow);
+</script>
         body {
             font-family: 'Arial', sans-serif;
             background: linear-gradient(135deg, #00695c, #00796b, #00897b);
@@ -231,6 +260,7 @@
     </div>
 </body>
 </html>
+
 
 
 
