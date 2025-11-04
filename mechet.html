@@ -5,181 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мечеть Кул-Шариф - Новогодняя Казань</title>
     <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap');
 
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #ff6b35, #c6426e, #8a2be2);
+    color: white;
+    min-height: 100vh;
+}
 
-    body {
-        font-family: 'Montserrat', sans-serif;
-        background: linear-gradient(135deg, #ff6b35, #c6426e, #8a2be2);
-        color: white;
-        min-height: 100vh;
-        position: relative;
-        overflow-x: hidden;
-    }
+h1, h2, h3 {
+    font-weight: 500;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
 
-    /* Снежинки */
-    .snow {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-        z-index: 1000;
-    }
-
-    .snowflake {
-        position: absolute;
-        background: white;
-        border-radius: 50%;
-        opacity: 0.8;
-        animation: fall linear infinite;
-    }
-
-    @keyframes fall {
-        to {
-            transform: translateY(100vh) rotate(360deg);
-        }
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        position: relative;
-        z-index: 2;
-    }
-
-    .back-button {
-        display: inline-flex;
-        align-items: center;
-        padding: 12px 25px;
-        background: rgba(255, 255, 255, 0.15);
-        color: white;
-        text-decoration: none;
-        border-radius: 25px;
-        margin-bottom: 30px;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        font-weight: 500;
-    }
-
-    .back-button:hover {
-        background: rgba(255, 255, 255, 0.25);
-        transform: translateY(-2px);
-    }
-
-    .content-grid {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .section {
-        background: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(20px);
-        border-radius: 20px;
-        padding: 35px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        transition: all 0.3s ease;
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    }
-
-    .section:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    }
-
-   h1 {
+h1 {
     font-size: 2.8em;
     margin-bottom: 20px;
-    color: white;
-    font-weight: 700;
     text-align: center;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
 
 h2 {
     font-size: 2em;
     margin-bottom: 20px;
-    color: white;
-    font-weight: 600;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
 }
 
 h3 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: white;
-    font-weight: 500;
 }
 
-    .story {
-        font-size: 1.15em;
-        line-height: 1.7;
-        margin-bottom: 20px;
-    }
+.story, p {
+    font-weight: 300;
+    font-size: 1.15em;
+    line-height: 1.7;
+    letter-spacing: 0.2px;
+    opacity: 0.95;
+}
 
-    .comparison-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 20px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 15px;
-        overflow: hidden;
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-        padding: 18px;
-        text-align: left;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .comparison-table th {
-        background: rgba(255, 215, 0, 0.2);
-        color: #ffd700;
-        font-weight: 600;
-        font-size: 1.1em;
-    }
-
-    .food-image {
-        font-size: 2em;
-        text-align: center;
-    }
-
-    .legend {
-        background: rgba(255, 255, 255, 0.08);
-        padding: 25px;
-        border-radius: 15px;
-        margin: 20px 0;
-        border-left: 4px solid #ffd700;
-    }
-
-    /* Адаптивность */
-    @media (max-width: 768px) {
-        .container {
-            padding: 15px;
-        }
-        
-        .section {
-            padding: 25px;
-        }
-        
-        h1 {
-            font-size: 2.2em;
-        }
-        
-        h2 {
-            font-size: 1.7em;
-        }
-    }
+.legend {
+    font-weight: 300;
+    line-height: 1.8;
+}
 </style>
 </head>
 <body>
@@ -341,6 +209,7 @@ h3 {
 </script>
 </body>
 </html>
+
 
 
 
