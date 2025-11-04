@@ -13,44 +13,6 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
-        <!-- Снежинки -->
-<div class="snow" id="snow"></div>
-
-<script>
-    function createSnow() {
-        const snowContainer = document.getElementById('snow');
-        const snowflakesCount = 80; // Уменьшил количество для производительности
-        
-        // Очищаем контейнер на всякий случай
-        snowContainer.innerHTML = '';
-        
-        for (let i = 0; i < snowflakesCount; i++) {
-            const snowflake = document.createElement('div');
-            snowflake.className = 'snowflake';
-            
-            const size = Math.random() * 4 + 1; // Уменьшил размер
-            const startPosition = Math.random() * 100;
-            const animationDuration = Math.random() * 10 + 5;
-            const animationDelay = Math.random() * 5;
-            
-            snowflake.style.width = `${size}px`;
-            snowflake.style.height = `${size}px`;
-            snowflake.style.left = `${startPosition}vw`;
-            snowflake.style.animationDuration = `${animationDuration}s`;
-            snowflake.style.animationDelay = `${animationDelay}s`;
-            snowflake.style.opacity = Math.random() * 0.6 + 0.2; // Уменьшил прозрачность
-            
-            snowContainer.appendChild(snowflake);
-        }
-    }
-
-    // Загружаем снежинки когда страница полностью загружена
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', createSnow);
-    } else {
-        createSnow();
-    }
-</script>
     body {
         font-family: 'Montserrat', sans-serif;
         background: linear-gradient(135deg, #ff6b35, #c6426e, #8a2be2);
@@ -340,8 +302,47 @@
             </div>
         </div>
     </div>
+    <!-- Снежинки -->
+<div class="snow" id="snow"></div>
+
+<script>
+    function createSnow() {
+        const snowContainer = document.getElementById('snow');
+        const snowflakesCount = 80; // Уменьшил количество для производительности
+        
+        // Очищаем контейнер на всякий случай
+        snowContainer.innerHTML = '';
+        
+        for (let i = 0; i < snowflakesCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            
+            const size = Math.random() * 4 + 1; // Уменьшил размер
+            const startPosition = Math.random() * 100;
+            const animationDuration = Math.random() * 10 + 5;
+            const animationDelay = Math.random() * 5;
+            
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
+            snowflake.style.left = `${startPosition}vw`;
+            snowflake.style.animationDuration = `${animationDuration}s`;
+            snowflake.style.animationDelay = `${animationDelay}s`;
+            snowflake.style.opacity = Math.random() * 0.6 + 0.2; // Уменьшил прозрачность
+            
+            snowContainer.appendChild(snowflake);
+        }
+    }
+
+    // Загружаем снежинки когда страница полностью загружена
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', createSnow);
+    } else {
+        createSnow();
+    }
+</script>
 </body>
 </html>
+
 
 
 
