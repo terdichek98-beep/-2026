@@ -368,7 +368,7 @@
 <script>
     function createSnow() {
         const snowContainer = document.getElementById('snow');
-        const snowflakesCount = 45;
+        const snowflakesCount = 100; // Как на главной
         
         snowContainer.innerHTML = '';
         
@@ -376,9 +376,10 @@
             const snowflake = document.createElement('div');
             snowflake.className = 'snowflake';
             
-            const size = Math.random() * 8 + 4;
+            // БОЛЬШИЕ и ЯРКИЕ снежинки
+            const size = Math.random() * 5 + 2; // 2-7px
             const startPosition = Math.random() * 100;
-            const animationDuration = Math.random() * 10 + 8;
+            const animationDuration = Math.random() * 5 + 5; // 5-10 секунд
             const animationDelay = Math.random() * 5;
             
             snowflake.style.width = `${size}px`;
@@ -386,7 +387,7 @@
             snowflake.style.left = `${startPosition}vw`;
             snowflake.style.animationDuration = `${animationDuration}s`;
             snowflake.style.animationDelay = `${animationDelay}s`;
-            snowflake.style.opacity = Math.random() * 0.5 + 0.2;
+            snowflake.style.opacity = Math.random() * 0.6 + 0.3; // Яркие!
             
             snowContainer.appendChild(snowflake);
         }
@@ -396,6 +397,7 @@
 </script>
 </body>
 </html>
+
 
 
 
