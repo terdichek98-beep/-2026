@@ -12,7 +12,36 @@
     }
 
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+<!-- Снежинки -->
+<div class="snow" id="snow"></div>
 
+<script>
+    function createSnow() {
+        const snowContainer = document.getElementById('snow');
+        const snowflakesCount = 120;
+        
+        for (let i = 0; i < snowflakesCount; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.className = 'snowflake';
+            
+            const size = Math.random() * 6 + 2;
+            const startPosition = Math.random() * 100;
+            const animationDuration = Math.random() * 8 + 4;
+            const animationDelay = Math.random() * 5;
+            
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
+            snowflake.style.left = `${startPosition}vw`;
+            snowflake.style.animationDuration = `${animationDuration}s`;
+            snowflake.style.animationDelay = `${animationDelay}s`;
+            snowflake.style.opacity = Math.random() * 0.7 + 0.3;
+            
+            snowContainer.appendChild(snowflake);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', createSnow);
+</script>
     body {
         font-family: 'Montserrat', sans-serif;
         background: linear-gradient(135deg, #ff6b35, #c6426e, #8a2be2);
@@ -304,6 +333,7 @@
     </div>
 </body>
 </html>
+
 
 
 
