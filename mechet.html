@@ -149,13 +149,42 @@
 <div class="section">
     <h2>🎵 Новогодний плейлист "Зимняя Казань"</h2>
     <div style="text-align: center; margin: 20px 0;">
-        <div id="vk_playlist_802804724_1"></div>
-        <script type="text/javascript" src="https://vk.com/js/api/openapi.js?173"></script>
+        
+        <!-- Попытка загрузки VK плеера -->
+        <div id="vk_playlist_802804724_1" style="min-height: 300px; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 15px;">
+            <div style="padding: 40px;">
+                <div style="font-size: 3em; margin-bottom: 15px;">⏳</div>
+                <p>Загрузка плейлиста...</p>
+            </div>
+        </div>
+        
         <script type="text/javascript">
           (function() {
-            VK.Widgets.Playlist("vk_playlist_802804724_1", 802804724, 1,'007defa4d21ffdcf05');
+            // Пытаемся загрузить VK плеер
+            setTimeout(function() {
+              if (typeof VK !== 'undefined') {
+                VK.Widgets.Playlist("vk_playlist_802804724_1", 802804724, 1,'007defa4d21ffdcf05');
+              } else {
+                // Если VK не загрузился за 3 секунды - показываем альтернативу
+                document.getElementById('vk_playlist_802804724_1').innerHTML = `
+                  <div style="padding: 30px;">
+                    <div style="font-size: 4em; margin-bottom: 20px;">🎧</div>
+                    <h3 style="color: #ffd700;">Плейлист не загрузился</h3>
+                    <p style="margin: 15px 0;">VK заблокировал встраивание на этом сайте</p>
+                    <a href="https://vk.com/audio_playlist802804724_1" 
+                       target="_blank"
+                       style="display: inline-block; padding: 15px 30px; background: #4C75A3; color: white; 
+                              text-decoration: none; border-radius: 25px; font-weight: bold; margin-top: 10px;">
+                       🎶 Открыть плейлист в VK
+                    </a>
+                  </div>
+                `;
+              }
+            }, 3000);
           }());
         </script>
+        <script type="text/javascript" src="https://vk.com/js/api/openapi.js?173" async></script>
+        
         <p style="margin-top: 15px; opacity: 0.8;">
             <em>Слушайте мой специальный новогодний плейлист</em>
         </p>
@@ -202,6 +231,7 @@
     </div>
 </body>
 </html>
+
 
 
 
