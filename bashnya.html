@@ -411,6 +411,62 @@ body {
     color: rgba(255, 255, 255, 0.8);
     font-style: italic;
 }
+     /* Для мобильных телефонов */
+@media (max-width: 768px) {
+    .section .legend {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 25px 0 !important;
+        padding: 25px 20px !important;
+        box-sizing: border-box;
+    }
+    
+    .section .legend h3 {
+        font-size: 1.4em;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .section .legend p {
+        font-size: 1.05em;
+        line-height: 1.7;
+        text-align: left;
+        margin-bottom: 18px;
+    }
+    
+    /* Убедимся, что секция не сжимается */
+    .section {
+        padding: 25px 20px !important;
+        margin: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+    
+    .container {
+        padding: 15px 10px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+    .section .legend {
+        padding: 20px 15px !important;
+        margin: 20px 0 !important;
+    }
+    
+    .section .legend h3 {
+        font-size: 1.3em;
+    }
+    
+    .section .legend p {
+        font-size: 1em;
+        line-height: 1.6;
+    }
+    
+    .section {
+        padding: 20px 15px !important;
+    }
+}
              /* Стили для VK плейлиста */
         #vk_playlist_-233642364_1 {
             margin: 20px 0;
@@ -714,6 +770,7 @@ body {
 </script>
 </body>
 </html>
+
 
 
 
